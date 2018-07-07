@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class TimeAspect {
 
-    @Around("execution(public * com.example.learn.restApi.*.controller.*(..))")
+    @Around("execution(public * com.example.learn.restApi.user.controller.*(..))")
     public void excuTime(ProceedingJoinPoint joinPoint) throws Throwable {
         Object[] objs = joinPoint.getArgs();
         for (Object o : objs) {
