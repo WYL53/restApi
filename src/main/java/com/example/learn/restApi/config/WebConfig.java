@@ -13,6 +13,8 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         super.addInterceptors(registry);
-        registry.addInterceptor(timeIntorceptor);
+//        registry.addInterceptor(timeIntorceptor);
+        //addPathPatterns 可以设置匹配url规则
+        registry.addInterceptor(timeIntorceptor).addPathPatterns("/**");
     }
 }
